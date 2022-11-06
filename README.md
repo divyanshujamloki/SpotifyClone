@@ -3,16 +3,16 @@ Spotify clone built using vanilla js, vite and tailwind css.
 
 *************************************************************************************************************************************************************************
 
-![spotify](https://user-images.githubusercontent.com/77928275/200170321-6ed08959-4596-4cad-9cbc-148816dd0195.png)
+![spotify](https://user-images.githubusercontent.com/77928275/200170474-efe8aff3-8d5c-4db0-8aec-b9958faa8659.png)
 
 
-![spotify2](https://user-images.githubusercontent.com/77928275/200170358-37b72e79-0df2-493a-a17d-b1e84e943e87.png)
+![spotify2](https://user-images.githubusercontent.com/77928275/200170480-c9ceda7f-6f5a-45c5-a152-9026506aa681.png)
 
 
-![spotify3](https://user-images.githubusercontent.com/77928275/200170363-e82c4ccd-a269-4cd5-81b6-1a5dfe108d9b.png)
+![spotify3](https://user-images.githubusercontent.com/77928275/200170481-4232c978-bdcd-4552-b80c-ff652630d832.png)
 
 
-![spotify4](https://user-images.githubusercontent.com/77928275/200170365-2541940e-077b-4b9d-a277-9b4e9acbaa10.png)
+![spotify4](https://user-images.githubusercontent.com/77928275/200170483-e82f5bc5-44fd-449b-8ea5-9d6143c27257.png)
 
 
 
