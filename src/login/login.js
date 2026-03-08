@@ -1,8 +1,8 @@
 import { ACCESS_TOKEN, EXPIRES_IN, TOKEN_TYPE } from "../common";
 
 const client_id = import.meta.env.VITE_CLIENT_ID;
-const redirect_uri = import.meta.env.VITE_REDIRECT_URI;
 const APP_URL = window.location.origin;
+const redirect_uri = `${APP_URL}/login/login.html`;
 const scopes = "user-top-read user-follow-read playlist-read-private user-library-read";
 
 // PKCE Helpers
