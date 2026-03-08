@@ -1,0 +1,16 @@
+[build]
+  command   = "npm run build"
+  publish   = "dist"
+
+# Proxy /saavn-api/* → saavn.sumit.co (replaces Vite dev proxy for production)
+[[redirects]]
+  from    = "/saavn-api/*"
+  to      = "https://saavn.sumit.co/:splat"
+  status  = 200
+  force   = true
+
+# SPA fallback — send all routes to index.html so client-side navigation works
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
