@@ -1,6 +1,8 @@
 # SpotifyClone
 Spotify clone built using vanilla js, vite and tailwind css.
 
+Due to Spotify restrictions, it requires whitelisting via Divyanshu. Please contact him.
+
 *************************************************************************************************************************************************************************
 
 ![spotify](https://user-images.githubusercontent.com/77928275/200170474-efe8aff3-8d5c-4db0-8aec-b9958faa8659.png)
