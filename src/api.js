@@ -19,17 +19,23 @@ const getAccessToken = ()=>{
 
 
 
-const createAPIConfig = ({accessToken, tokenType}, method = "GET")=>{
-return {
-headers:{
-    Authorization:`${tokenType} ${accessToken}`
-},
-method
-}
+const createAPIConfig = ({ accessToken, tokenType }, method = "GET", body) => {
+    const config = {
+        headers: {
+            Authorization: `${tokenType} ${accessToken}`,
+            "Content-Type": "application/json"
+        },
+        method
+    }
+    if (body) {
+        config.body = JSON.stringify(body);
+    }
+    return config;
 }
 
-export const fetchRequest =async (endpoint)=>{
-const url =`${BASE_API_URL}/${endpoint}`;
-const result = await fetch(url, createAPIConfig(getAccessToken()));
-return result.json();
+export const fetchRequest = async (endpoint, method = "GET", body) => {
+    const url = `${BASE_API_URL}/${endpoint}`;
+    const result = await fetch(url, createAPIConfig(getAccessToken(), method, body));
+    if (result.status === 204) return null; // Standard for PUT/DELETE
+    return result.json();
 }

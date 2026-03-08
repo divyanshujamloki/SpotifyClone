@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - Spotify Clone</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="bg-black-base text-white flex flex-col items-center justify-center h-screen">
+    <div class="bg-black-secondary p-8 rounded-lg shadow-xl max-w-md w-full">
+        <h1 class="text-3xl font-bold mb-6 border-b border-gray pb-2">Account Overview</h1>
+        <div class="space-y-4">
+            <div class="flex justify-between">
+                <span class="text-secondary">Username</span>
+                <span id="acc-name">User</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="text-secondary">Plan</span>
+                <span class="text-green">Free</span>
+            </div>
+        </div>
+        <button onclick="window.history.back()" class="mt-8 w-full bg-white text-black px-6 py-2 rounded-full font-bold hover:scale-105 transition">Go Back</button>
+    </div>
+    <script>
+        const name = localStorage.getItem('DISPLAY_NAME') || 'User';
+        document.getElementById('acc-name').innerText = name;
+    </script>
+</body>
+</html>

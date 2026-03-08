@@ -1,8 +1,10 @@
+import { ACCESS_TOKEN } from './common';
 import './style.css';
-const APP_URL = import.meta.env.VITE_APP_URL;
+const APP_URL = window.location.origin;
+
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.getItem("accessToken")) {
+  if (localStorage.getItem(ACCESS_TOKEN)) {
     window.location.href = `${APP_URL}/dashboard/dashboard.html`;
   } else {
     window.location.href = `${APP_URL}/login/login.html`;

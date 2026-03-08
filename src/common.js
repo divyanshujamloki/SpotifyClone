@@ -3,13 +3,18 @@ export const TOKEN_TYPE = "TOKEN_TYPE";
 export const EXPIRES_IN = "EXPIRES_IN";
 export const NOW_PLAYING = "NOW_PLAYING";
 export const LOADED_TRACKS = "LOADED_TRACKS";
-const APP_URL = import.meta.env.VITE_APP_URL;
+export const LIKED_TRACKS = "LIKED_TRACKS";
+const APP_URL = window.location.origin;
 export const ENDPOINT = {
     userInfo: "me",
-    featuredPlayist: "browse/featured-playlists?limit=5",
-    toplists: "browse/categories/toplists/playlists?limit=10",
+    featuredPlayist: "search?q=Global+Top+50&type=playlist&limit=8",
+    toplists: "search?q=Pop+Hits+2024&type=playlist&limit=10",
+    hindiRomantic: "search?q=Hindi+Romantic+2024&type=playlist&limit=5",
+    workout: "search?q=Workout+Mix&type=playlist&limit=5",
     playlist: "playlists",
-    userPlaylist: "me/playlists"
+    userPlaylist: "me/playlists",
+    search: "search",
+    play: "me/player/play"
 }
 
 export const logout = () => {
@@ -28,5 +33,7 @@ export const setItemInLocalStorage = (key, value) => {
 
 export const SECTIONTYPE = {
     DASHBOARD: "DASHBOARD",
-    PLAYLIST: "PLAYLIST"
+    PLAYLIST: "PLAYLIST",
+    SEARCH: "SEARCH",
+    FAVORITE: "FAVORITE"
 }
