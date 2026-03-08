@@ -12,8 +12,18 @@ export default defineConfig(({ command, mode }) => {
     root: "src",
     envDir: "../", // Ensure env files are loaded from project root
     build: {
-      outDir: "../dist",  // Output to project root /dist (not src/dist)
-      emptyOutDir: true
+      outDir: "../dist",
+      emptyOutDir: true,
+      rollupOptions: {
+        input: {
+          main: path.resolve(__dirname, 'src/index.html'),
+          login: path.resolve(__dirname, 'src/login/login.html'),
+          dashboard: path.resolve(__dirname, 'src/dashboard/dashboard.html'),
+          account: path.resolve(__dirname, 'src/pages/account/account.html'),
+          profile: path.resolve(__dirname, 'src/pages/profile/profile.html'),
+          support: path.resolve(__dirname, 'src/pages/support/support.html'),
+        }
+      }
     },
     server: {
       proxy: {

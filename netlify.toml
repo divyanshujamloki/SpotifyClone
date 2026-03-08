@@ -9,8 +9,6 @@
   status  = 200
   force   = true
 
-# SPA fallback — send all routes to index.html so client-side navigation works
-[[redirects]]
-  from   = "/*"
-  to     = "/index.html"
-  status = 200
+# The SPA fallback below is NOT needed for your multi-page structure.
+# Removing it allows Netlify to serve each HTML file naturally.
+
